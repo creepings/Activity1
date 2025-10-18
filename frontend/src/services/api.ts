@@ -31,18 +31,18 @@ export interface UpdateTaskDto {
 }
 
 export const taskAPI = {
-  // Get all tasks
+  // pang kuhan ng lahat ng tasks
   getAllTasks: () => api.get<Task[]>('/tasks'),
   
-  // Get task by ID
+  // pang kuha ng id ng task
   getTaskById: (id: number) => api.get<Task>(`/tasks/${id}`),
   
-  // Create new task
+  // pang gawa ng task
   createTask: (task: CreateTaskDto) => api.post<Task>('/tasks', task),
   
-  // Update task
+  // pang update ng task
   updateTask: (id: number, task: UpdateTaskDto) => api.patch<Task>(`/tasks/${id}`, task),
   
-  // Delete task
+  // pang delete ng task
   deleteTask: (id: number) => api.delete(`/tasks/${id}`),
 };

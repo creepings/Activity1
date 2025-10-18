@@ -11,7 +11,6 @@ function App() {
   const [showForm, setShowForm] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
 
-  // Fetch all tasks on component mount
   useEffect(() => {
     fetchTasks();
   }, []);

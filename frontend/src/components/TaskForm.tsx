@@ -56,17 +56,6 @@ const TaskForm: React.FC<TaskFormProps> = ({ task, onSubmit, onCancel }) => {
             />
           </div>
           
-          <div className="form-group">
-            <label>
-              <input
-                type="checkbox"
-                checked={completed}
-                onChange={(e) => setCompleted(e.target.checked)}
-              />
-              Mark as completed
-            </label>
-          </div>
-          
           <div className="form-actions">
             <button type="submit" className="btn btn-primary">
               {task ? 'Update Task' : 'Create Task'}
